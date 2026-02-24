@@ -1,0 +1,95 @@
+{
+  "game_settings": {
+    "_comment_note": "=== 纯粹娱乐版：目标乱跳，手牌互换，全是节目效果 ===",
+    "_comment_hp": "玩家最大血量",
+    "max_hp": 10,
+
+    "_comment_hand": "王牌池上限",
+    "max_trumps_hand_size": 10,
+
+    "num_limit": "牌桌上王牌数目上限",
+    "max_active_trumps_on_table": 10,
+
+    "_comment_target": "游戏的目标点数 (默认为21)",
+    "target_score": 21,
+
+    "_comment_init": "开局时双方获得的王牌数量 (实际数量 = 此数值 + 1)",
+    "initial_trumps_count": 5,
+
+    "_comment_reward": "每回合开始时，双方自动获得的王牌奖励数量",
+    "round_reward_trumps_count": 2,
+
+    "_comment_hit_prob": "玩家点击 HIT (抽牌) 时，额外获得一张王牌的概率 (0.0 - 1.0)",
+    "hit_draw_trump_probability": 0.40,
+
+    "_comment_num_prob": "使用王牌池抽卡时，抽到'纯数字王牌'的概率。剩余概率才是抽功能牌。",
+    "number_card_draw_probability": 0.10,
+
+    "_comment_time": "回合结束时，结算界面停留的时间 (秒)",
+    "result_screen_duration": 4.0,
+
+    "_comment_deck_start": "牌堆数字的最小值 (默认1)",
+    "deck_range_start": 1,
+
+    "_comment_deck_end": "牌堆数字的最大值 (默认11，即包含1到11)",
+    "deck_range_end": 11
+
+  },
+  "trump_weights": {
+    "_name_01": "--- 基础数值 ---",
+    "_c_add1": "增加一", "Add 1": 5,
+    "_c_add2": "增加二", "Add 2": 5,
+
+    "_name_02": "--- 护盾 ---",
+    "_c_shield": "护盾", "Shield": 5,
+    "_c_shield_p": "护盾+", "Shield+": 2,
+    "_c_s_atk": "护盾攻击", "S-Attack": 0,
+    "_c_s_atk_p": "护盾攻击+", "S-Attack+": 0,
+
+    "_name_03": "--- 破坏 ---",
+    "_c_dst": "破坏", "Destroy": 5,
+    "_c_dst_p": "破坏+", "Destroy+": 2,
+    "_c_dst_pp": "破坏++", "Destroy++": 0,
+    "_c_d_dst": "死亡破坏", "D-Destroy": 0,
+
+    "_name_04": "--- 干扰 ---",
+    "_c_ret": "退回", "Return": 5,
+    "_c_ret_p": "增加二+", "Return+": 5,
+    "_c_rem": "撤除", "Remove": 5,
+    "_c_waste": "强迫消耗", "Waste": 0,
+    "_c_waste_p": "强迫消耗+", "Waste+": 0,
+    "_c_silence": "死寂", "Silence": 0,
+
+    "_name_05": "--- 搞心态核心 (目标变动) ---",
+    "_c_go17": "挑战 17点", "Go 17": 15,
+    "_c_go24": "挑战 24点", "Go 24": 15,
+    "_c_go27": "挑战 27点", "Go 27": 15,
+    "_c_add21": "增加二十一", "Add 21": 10,
+
+    "_name_06": "--- 抽牌 ---",
+    "_c_perf": "完美抽牌", "Perfect": 5,
+    "_c_perf_p": "完美抽牌+", "Perfect+": 2,
+    "_c_love": "爱你的敌人", "Love": 10,
+    "_c_udraw": "终极抽牌", "U-Draw": 5,
+    "_c_mdraw": "魔咒", "M-Draw": 5,
+    "_c_harv": "收割", "Harvest": 5,
+    "_c_happy": "幸福", "Happiness": 10,
+
+    "_name_07": "--- 搞心态核心 (交换) ---",
+    "_c_change": "交换 (换手牌)", "Change": 20,
+    "_c_trump_p": "王牌变换", "Trump+": 10,
+    "_c_trump_pp": "王牌变换+", "Trump++": 5,
+
+    "_name_08": "--- 高风险 ---",
+    "_c_desire": "欲望", "Desire": 0,
+    "_c_desire_p": "欲望+", "Desire+": 0,
+    "_c_gamble": "生死一搏", "Gamble": 2,
+    "_c_curse": "诅咒", "Curse": 5,
+    "_c_obliv": "遗忘 (重置回合)", "Oblivion": 8,
+    "_c_esc": "逃脱 (强制平局)", "Escape": 8,
+
+    "_name_09": "--- 数字牌 ---",
+    "_c_2p": "Two+", "Two+": 2, "_c_3p": "Three+", "Three+": 2, "_c_4p": "Four+", "Four+": 2, 
+    "_c_5p": "Five+", "Five+": 2, "_c_6p": "Six+", "Six+": 2, "_c_7p": "Seven+", "Seven+": 2
+  }
+}

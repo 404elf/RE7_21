@@ -1,0 +1,101 @@
+{
+  "game_settings": {
+    "_comment_hp": "玩家最大血量",
+    "max_hp": 10,
+
+    "_comment_hand": "王牌池上限",
+    "max_trumps_hand_size": 20,
+
+    "num_limit": "牌桌上王牌数目上限",
+    "max_active_trumps_on_table": 10,
+
+    "_comment_target": "游戏的目标点数 (默认为21)",
+    "target_score": 21,
+
+    "_comment_init": "开局时双方获得的王牌数量 (实际数量 = 此数值 + 1)",
+    "initial_trumps_count": 4,
+
+    "_comment_reward": "每回合开始时，双方自动获得的王牌奖励数量",
+    "round_reward_trumps_count": 1,
+
+    "_comment_hit_prob": "玩家点击 HIT (抽牌) 时，额外获得一张王牌的概率 (0.0 - 1.0)",
+    "hit_draw_trump_probability": 0.35,
+
+    "_comment_num_prob": "使用王牌池抽卡时，抽到'纯数字王牌'的概率。剩余概率才是抽功能牌。",
+    "number_card_draw_probability": 0.166,
+
+    "_comment_time": "回合结束时，结算界面停留的时间 (秒)",
+    "result_screen_duration": 4.0,
+
+    "_comment_deck_start": "牌堆数字的最小值 (默认1)",
+    "deck_range_start": 1,
+
+    "_comment_deck_end": "牌堆数字的最大值 (默认11，即包含1到11)",
+    "deck_range_end": 11
+  },
+
+  "trump_weights": {
+    "_comment_00_note": "=== 以下为王牌权重 (数值越大越容易抽到，0表示禁用) ===",
+
+    "_comment_01_math": "--- 基础数值类 ---",
+    "Add 1": 14,
+    "Add 2": 8,
+
+    "_comment_02_shield": "--- 护盾与反伤 ---",
+    "Shield": 10,
+    "Shield+": 5,
+    "S-Attack": 0,
+    "S-Attack+": 0,
+
+    "_comment_03_destroy": "--- 破坏类 (移除场上的卡) ---",
+    "Destroy": 0,
+    "Destroy+": 7,
+    "Destroy++": 0,
+    "D-Destroy": 0,
+
+    "_comment_04_control": "--- 干扰与控制 ---",
+    "Return": 9,
+    "_comment_return_plus": "Return+ 对应游戏内的 'ADD2+' (退回明牌+增伤)",
+    "Return+": 0,
+    "Remove": 9,
+    "Waste": 0,
+    "Waste+": 0,
+    "Silence": 0,
+
+    "_comment_05_target": "--- 修改目标分 ---",
+    "Go 17": 7,
+    "Go 24": 7,
+    "Go 27": 7,
+    "Add 21": 0,
+
+    "_comment_06_draw": "--- 抽牌辅助 ---",
+    "Perfect": 8,
+    "Perfect+": 0,
+    "Love": 0,
+    "U-Draw": 0,
+    "M-Draw": 0,
+    "Harvest": 0,
+    "Happiness": 0,
+
+    "_comment_07_exchange": "--- 交换与变身 ---",
+    "Change": 8,
+    "Trump+": 15,
+    "Trump++": 0,
+
+    "_comment_08_curse": "--- 诅咒与高风险 ---",
+    "Desire": 0,
+    "Desire+": 0,
+    "Gamble": 0,
+    "Curse": 0,
+    "Oblivion": 0,
+    "Escape": 0,
+
+    "_comment_09_spec_num": "--- 数字功能牌+ (抽指定数字+回费) ---",
+    "Two+": 0,
+    "Three+": 0,
+    "Four+": 0,
+    "Five+": 0,
+    "Six+": 0,
+    "Seven+": 0
+  }
+}
