@@ -27,4 +27,4 @@ jobs:
         run: python -m py_compile re7_21.py
 
       - name: Pytest
-        run: pytest -q
+        run: python -m pytest -q
