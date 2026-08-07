@@ -3,28 +3,34 @@ import struct
 
 
 def send_msg(sock, data):
-    payload = pickle.dumps(data)
-    sock.sendall(struct.pack('>I', len(payload)) + payload)
+    if not sock:
+        return False
+    try:
+        raw = pickle.dumps(data)
+        sock.sendall(struct.pack('>I', len(raw)) + raw)
+        return True
+    except:
+        return False
 
 
 def recv_msg(sock):
-    raw_len = recv_exact(sock, 4)
-    if not raw_len:
+    if not sock:
         return None
+    try:
+        raw_len = b""
+        while len(raw_len) < 4:
+            chunk = sock.recv(4 - len(raw_len))
+            if not chunk:
+                return None
+            raw_len += chunk
+        msg_len = struct.unpack('>I', raw_len)[0]
 
-    length = struct.unpack('>I', raw_len)[0]
-    payload = recv_exact(sock, length)
-    if not payload:
+        raw_data = b""
+        while len(raw_data) < msg_len:
+            chunk = sock.recv(msg_len - len(raw_data))
+            if not chunk:
+                return None
+            raw_data += chunk
+        return pickle.loads(raw_data)
+    except:
         return None
-
-    return pickle.loads(payload)
-
-
-def recv_exact(sock, length):
-    data = b''
-    while len(data) < length:
-        chunk = sock.recv(length - len(data))
-        if not chunk:
-            return None
-        data += chunk
-    return data
