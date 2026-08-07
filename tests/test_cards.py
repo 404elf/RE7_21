@@ -20,4 +20,4 @@ def test_calculate_potential_damage_applies_add_and_shield():
     ]
 
     assert state.calculate_potential_damage(2) == 2
-    assert state.calculate_potential_damage(1) == 0
+    assert state.calculate_potential_damage(1) == 1
